@@ -58,13 +58,13 @@ async function main() {
   const artist1 = await prisma.artist.create({
     data: {
       name: "Hozier",
-      imageUrl: "https://i.scdn.co/image/ab6761610000e5eb45e7eae167399ab37e8d40b2",
+      imageUrl: "https://picsum.photos/seed/hozier/640/640",
       genres: "indie rock, folk",
       topSongs: {
         create: [
-          { trackName: "Take Me to Church", albumName: "Hozier", rank: 1, albumArtUrl: "https://i.scdn.co/image/ab67616d0000b273a0adee3e383a7b420fa9e4fb", spotifyUrl: "https://open.spotify.com/track/1CS7Sd1u5tY4bvE17h1E0U" },
-          { trackName: "Too Sweet", albumName: "Unreal Unearth", rank: 2, albumArtUrl: "https://i.scdn.co/image/ab67616d0000b273e35ba863e1c8f0e96e23dfb8", spotifyUrl: "https://open.spotify.com/track/3u52T7fOJ1pvKjXriCcrHv" },
-          { trackName: "Cherry Wine", albumName: "Hozier", rank: 3, albumArtUrl: "https://i.scdn.co/image/ab67616d0000b273a0adee3e383a7b420fa9e4fb", spotifyUrl: "https://open.spotify.com/track/1RnLJlGE1rOGSmBv5YSfcE" },
+          { trackName: "Take Me to Church", albumName: "Hozier", rank: 1, albumArtUrl: "https://picsum.photos/seed/hozier-album1/300/300", spotifyUrl: "https://open.spotify.com/track/1CS7Sd1u5tY4bvE17h1E0U" },
+          { trackName: "Too Sweet", albumName: "Unreal Unearth", rank: 2, albumArtUrl: "https://picsum.photos/seed/hozier-album2/300/300", spotifyUrl: "https://open.spotify.com/track/3u52T7fOJ1pvKjXriCcrHv" },
+          { trackName: "Cherry Wine", albumName: "Hozier", rank: 3, albumArtUrl: "https://picsum.photos/seed/hozier-album1/300/300", spotifyUrl: "https://open.spotify.com/track/1RnLJlGE1rOGSmBv5YSfcE" },
         ],
       },
     },
@@ -73,12 +73,12 @@ async function main() {
   const artist2 = await prisma.artist.create({
     data: {
       name: "Khruangbin",
-      imageUrl: "https://i.scdn.co/image/ab6761610000e5eb6b6a07bd9cf7f37dab67b6d3",
+      imageUrl: "https://picsum.photos/seed/khruangbin/640/640",
       genres: "psychedelic rock, funk",
       topSongs: {
         create: [
-          { trackName: "Time (You and I)", albumName: "Con Todo El Mundo", rank: 1, albumArtUrl: "https://i.scdn.co/image/ab67616d0000b273c5eb4ff16da74e5db4c4b982", spotifyUrl: "https://open.spotify.com/track/7MVIfkyzNMbSzJGIcDvmkP" },
-          { trackName: "People Everywhere (Still Alive)", albumName: "The Universe Smiles Upon You", rank: 2, albumArtUrl: "https://i.scdn.co/image/ab67616d0000b2734f518c25690c40aeb06c7a64", spotifyUrl: "https://open.spotify.com/track/0gSBJqjK5bLKUwlBFrNY9y" },
+          { trackName: "Time (You and I)", albumName: "Con Todo El Mundo", rank: 1, albumArtUrl: "https://picsum.photos/seed/khruangbin-album1/300/300", spotifyUrl: "https://open.spotify.com/track/7MVIfkyzNMbSzJGIcDvmkP" },
+          { trackName: "People Everywhere (Still Alive)", albumName: "The Universe Smiles Upon You", rank: 2, albumArtUrl: "https://picsum.photos/seed/khruangbin-album2/300/300", spotifyUrl: "https://open.spotify.com/track/0gSBJqjK5bLKUwlBFrNY9y" },
         ],
       },
     },
@@ -87,7 +87,7 @@ async function main() {
   const artist3 = await prisma.artist.create({
     data: {
       name: "Local Natives",
-      imageUrl: "https://i.scdn.co/image/ab6761610000e5ebe7a709e88e0c6a1d7bca6b47",
+      imageUrl: "https://picsum.photos/seed/localnatives/640/640",
       genres: "indie rock, indie pop",
       topSongs: {
         create: [
@@ -101,7 +101,7 @@ async function main() {
   const artist4 = await prisma.artist.create({
     data: {
       name: "Turnpike Troubadours",
-      imageUrl: "https://i.scdn.co/image/ab6761610000e5eb1dec1a9d8e58d1583fa2fb81",
+      imageUrl: "https://picsum.photos/seed/turnpike/640/640",
       genres: "red dirt, oklahoma country",
       topSongs: {
         create: [
