@@ -1,0 +1,85 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+model Venue {
+  id        String   @id @default(cuid())
+  name      String
+  address   String?
+  lat       Float?
+  lng       Float?
+  isOutdoor Boolean  @default(false)
+  website   String?
+  scrapable Boolean  @default(false)
+  events    Event[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Artist {
+  id        String    @id @default(cuid())
+  name      String
+  spotifyId String?   @unique
+  imageUrl  String?
+  genres    String?
+  events    Event[]
+  topSongs  TopSong[]
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+}
+
+model TopSong {
+  id          String  @id @default(cuid())
+  artistId    String
+  artist      Artist  @relation(fields: [artistId], references: [id], onDelete: Cascade)
+  trackName   String
+  albumName   String?
+  albumArtUrl String?
+  previewUrl  String?
+  spotifyUrl  String?
+  rank        Int
+}
+
+model Event {
+  id            String           @id @default(cuid())
+  title         String
+  artistName    String
+  artistId      String?
+  artist        Artist?          @relation(fields: [artistId], references: [id])
+  venueId       String?
+  venue         Venue?           @relation(fields: [venueId], references: [id])
+  venueName     String
+  date          DateTime
+  time          String?
+  isOutdoor     Boolean          @default(false)
+  ticketUrl     String?
+  priceMin      Float?
+  priceMax      Float?
+  priceCategory String?
+  source        String
+  sourceId      String?
+  weather       WeatherForecast?
+  createdAt     DateTime         @default(now())
+  updatedAt     DateTime         @updatedAt
+
+  @@unique([artistName, date, venueName])
+}
+
+model WeatherForecast {
+  id           String   @id @default(cuid())
+  eventId      String   @unique
+  event        Event    @relation(fields: [eventId], references: [id], onDelete: Cascade)
+  date         DateTime
+  tempHigh     Float?
+  tempLow      Float?
+  icon         String?
+  description  String?
+  precipChance Float?
+  windSpeed    Float?
+  severity     String   @default("none")
+  fetchedAt    DateTime @default(now())
+}
