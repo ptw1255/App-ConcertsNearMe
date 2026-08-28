@@ -1,5 +1,9 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## Product portfolio
+
+Concerts Near Me is a Wilmington-focused discovery prototype that brings event listings, relative price context, artist previews, and outdoor-event weather into one browsing flow. The [product case study and artifacts](docs/product/README.md) explain why local discovery is fragmented, identify user jobs and tradeoffs, document repository evidence and assumptions, provide tailored wireframes, and define an evidence-gated roadmap.
+
 ## Getting Started
 
 First, run the development server:
